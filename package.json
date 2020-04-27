@@ -1,0 +1,24 @@
+{
+  "name": "reniec-api",
+  "version": "1.0.0",
+  "description": "API dummy para simulacion de interaccion con RENIEC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthbravo/reniec-api.git"
+  },
+  "author": "Anthony Bravo <anthony.bravo.berrio@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthbravo/reniec/issues"
+  },
+  "homepage": "https://github.com/anthbravo/reniec#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
