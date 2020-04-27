@@ -1,0 +1,38 @@
+language: node_js
+node_js:
+  - "12"
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+branches:
+  only:
+    - master
+git:
+  depth: 3
+script:
+  - yarn test
+email:
+  recipients:
+    - u201320891@upc.edu.pe
+    - U201413797@upc.edu.pe
+    - u201514642@upc.edu.pe
+    - u20161a096@upc.edu.pe
+    - U201613694@upc.edu.pe
+    - u201824310@upc.edu.pe
+    - u20191a919@upc.edu.pe
+  on_success: always
+  on_failure: always
+notifications:
+  webhooks:
+    - secure: "SoWuFDQ4TC8jeuRFC0QDQvwhSr8eA1LENEnPB1g9iG1C4C+z32fX5XOPEBDbEAN/RV1vFlKRqs2+8rgC0H+w9WrbCQJtrn8Gg4DEw9PTRj1y4ooZ5etGeOdcXMd9HvdnvDbytZizFQAtgPVu/eiP+abBjrJ6vDtuvEH+X7JK2vDwt08QYlFuGjyCTKB+AvkPgge4cj0t0cXZexr8lFxMfOTFvOz4BnAiIVgdi3/wS+a2FxzsoGq6+EkXphhxH8XFkcIWmGmplNCe6QipWXn8RJeeP5SKXNOS88x0EIAHLP01Q60/wl7ZVoOhWOIeHNMVzo4xwjQlPJDY+yvoNNeFJxu8dTgU1ene2GppeyNHKr4zbLX883SO3XjSsmZ2xo+U42vaxEZ15nrzxm2cqTOYi4eLxmxCn9Nn0aVLRymspFYPywaRwv1Lg0RjSLfXDpk0BMAarK1VO8IHy/nbD7euC7GrQ6B9MRgni9TfVwxxQ0pRM+G3n8ziuErQqufkN0FIAGiIHpt99qMvHVbc0lrbjMiz13D0XZkIYjyoPkrH1D7bUdnKuurFaK5ppcR3JpG04B0cstinjZETjcFs3HtsKNK/8E8S0b9/1+gw5LfQmNosj9etx8DIFhSVqnVz7/261xdfMlK/zrtc+hSyGaa6GzhY8wOcNxk8dNF71Kl8ZsU="
+    - secure: "r9jkvAYqfLV2K+N71DWhua+kr+EEgFLu3dDXbciYRS9HD2lL3QEhag5BJB8/rq0T8tey2HE9/BPQvqnOpzCD9wn7CXa35SWvqsjzKfv/PgiPy11vBIuLKT/xJduBx6TybmmWWUGF3geAVJBoQlW8DoDcFnEqIwy+5sXNVSyjARfSQOwFIg6igv82fiW+9KqDcfsHTK6zSAd1SYzW6Bpxfz6I14c5KMoc/iRxeZyubaVSYwmQ5oY1eTr4lAhIkToA2gler0PB6Dp6fKYkdw6k9cKThrognaW0q4aosiswN4SmdvkF8yo5WjRplcKH4zLTpHG+yGBaTr+SPjHYKbYtGuG20LR2v5ddB8GOIvZOHoS8k9BVwUMQwZZUOzZdtZ5PFYFIyPs/A0bE/IwE3ltRgghvZLqHhzg+A5GTAOOvgckAmfBOeAUN3doeHXblLy1rvP8FBu7QE2z67SiiVDE2UvXOb36ErdHQ6DSmbbqkim4I9MUvckH67FUoL77N/JkKyjvAyqqwymmy5mRVfPrgojjOgI3YpPGjrawtCq2knhscstjXHJeum5olm9PmZUpoPAGf/A/GrtxcvPCgZ8HJolIye97JfNGHT0I33J5oxszQVqD+A9Yd5/AqKpdLWqaT81EmVYZuRuUgbHOIMHbjtPTMTcUX3+IAaP+3cRPyvjg="
+deploy:
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key:
+    secure: "gQG9z/iiSQnLAWL39A1jJoSY+ZUm8D+bZAHtB9TmFmD7nMjGxLOX6M7FTDTy/4ImPui4ihq8AgZ/se3nQ6n6/i885f4h0uke7wtn5/zyvWGGxTCjou8NDU20u3L5tJANAKHFctcjwfqiBm2/URtgpgFCsUDFSfHnXt31vUW3MoSsCcfd9JmtN/+Uez7v768YJOu6KBHNOkAp6mqSH9SZhn/1IZvYQT5x7r3XkkjKJtDqPVD9ms3M8oYFYlRzInmBgMAd4Gomfva1RV8DhaOM9DRFJ8Uw9HYIQgOFzP5unJyXtOKhqYwwe58QcrqIQ+FO6KRWs0Tn5002W1I3YQryBo4BJmGyFau7lHYTM70XCFwPIl3gMbeSqqqgALNq27+cA+tOSXfry9kAoOymGJ5cm7Pwp/rquEjypbCb3pw1TiZbTSJa5Fg+8MjQzYRLa2rzmTGdi7K3qQg+WZJ52WDXjzG2HJj8wTptsmYrJIgTm14XEsnImEAqe0POde7I409gX75dzvQknKReSK6O6Uwr05H8QVRnUBpDQRTQMe9g4Id9wBnQHcsoTDZVZS2O8+EfWuFbHUgI5t1r0a9C63TnJdDmVGYeekIuQplv+67pF5ynGJ/UDqY5Qt9r0ve+cmNeXnxlA/nMxvXuQQapGvmefFdgjVYXj6lNml9AGEqLzvI="
+  app: reniec-api
+  on:
+    repo: anthbravo/reniec-api
